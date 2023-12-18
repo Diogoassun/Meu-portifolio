@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Diogo_dev</title>
+</head>
+<body>
+    <div class="header-container">
+        <p id="Name">Diogo</p>
+        <div class="custom-select">
+            <p id="OP1" class="light-text"><a href="#portifolio">Quem sou eu</a></p>
+            <p id="OP2" class="light-text"><a href="#fotos">Projetos</a></p>
+        </div>
+    </div>
+
+    <div class="swiper-container" id="fotos">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./Fotos/IMG-20231217-WA0024.jpg" alt="Descrição da imagem 1"></div>
+            <div class="swiper-slide"><img src="./Fotos/IMG-20231217-WA0026.jpg" alt="Descrição da imagem 2"></div>
+            <div class="swiper-slide"><img src="./Fotos/IMG-20231217-WA0027.jpg" alt="Descrição da imagem 3"></div>
+            <div class="swiper-slide"><img src="./Fotos/IMG-20231217-WA0028.jpg" alt="Descrição da imagem 4"></div>
+            <div class="swiper-slide"><img src="./Fotos/IMG-20231217-WA0029.jpg" alt="Descrição da imagem 5"></div>
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="portfolio-container" id="portifolio">
+        <div class="portfolio-text">
+            <h2>Apresentação para o Portfólio de Diogo</h2>
+            <p>
+                Olá, eu sou Diogo, nascido em 21/10/2004, natural de Fortaleza, Ceará, Brasil. 
+                Atualmente, aos 19 anos, resido em Quixadá, mergulhado na empolgante jornada 
+                da Engenharia de Computação na Universidade Federal do Ceará (UFC), localizada 
+                no campus de Quixadá. A UFC é reconhecida como a melhor instituição de ensino 
+                superior do norte-nordeste, destacando-se especialmente por sua ênfase em tecnologia.
+            </p>
+            
+            <p>
+                A escolha pela Engenharia de Computação foi natural para mim, impulsionada pela 
+                fascinação pelo mundo dos sistemas embarcados. Desde o primeiro ano na universidade, 
+                meu entusiasmo tem sido canalizado para explorar e criar soluções inovadoras. Em 
+                colaboração com colegas, tive o privilégio de contribuir para o desenvolvimento de 
+                um sistema de monitoramento de umidade no solo. Este projeto não apenas aprimorou 
+                minhas habilidades técnicas, mas também destacou a importância da colaboração e do 
+                trabalho em equipe, valores fundamentais na minha jornada acadêmica e profissional.
+            </p>
+
+            <p>
+                O campus de Quixadá da UFC oferece um ambiente estimulante e desafiador, ideal 
+                para o florescimento de mentes inquisitivas. Minha trajetória acadêmica tem sido 
+                marcada por desafios que moldaram meu caráter e fortaleceram minha paixão por tecnologia. 
+                Estou comprometido em continuar explorando os horizontes da Engenharia de Computação, 
+                buscando constantemente inovações que possam contribuir significativamente para o avanço 
+                da sociedade.
+            </p>
+
+            <p>
+                Este portfólio é uma janela para minha jornada, destacando projetos, conquistas e o 
+                aprendizado contínuo que moldam minha visão e paixão pela Engenharia de Computação. 
+                Convido você a explorar as diferentes facetas do meu percurso, e espero que esta seja 
+                apenas uma das muitas conexões que estabeleceremos em nossa jornada em busca do conhecimento 
+                e da excelência tecnológica.
+            </p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Inicialize o Swiper
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Inicialize o Swiper
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 5000, // Tempo em milissegundos entre os slides (5 segundos no exemplo)
+            },
+            speed: 1000, // Duração da transição entre slides em milissegundos (1 segundo no exemplo)
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // jQuery para rolar suavemente ao clicar nos links do menu
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click', function(e){
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top
+                }, 900, 'swing');
+            });
+        });
+    </script>
+
+</body>
+</html>

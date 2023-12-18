@@ -1,0 +1,160 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #0c0125;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#Name {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    padding-left: 4px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 1s ease-out;
+}
+
+#OP1,
+#OP2 {
+    font-weight: 300;
+    margin: 0 15px;
+    padding-right: 5px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease; /* Adiciona transições suaves para color e transform */
+}
+
+#OP1 a,
+#OP2 a {
+    color: #fff;
+    text-decoration: none;
+    display: block; /* Adiciona display block para prevenir quebras de linha */
+    transition: color 0.3s ease; /* Adiciona uma transição adicional para color */
+}
+
+#OP1:hover,
+#OP2:hover {
+    transform: scale(1.1); /* Adiciona um leve aumento de escala ao passar o mouse */
+}
+
+#OP1 a:hover,
+#OP2 a:hover {
+    text-decoration: none;
+    color: #ffcc00;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-container {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 350px auto; /* Centraliza horizontalmente e define margem superior e inferior */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%; /* Ajuste a largura conforme necessário */
+    box-sizing: border-box; /* Garante que as bordas e o padding não alterem a largura total */
+    margin-right: auto; /* Adiciona margem à direita */
+    margin-left: auto; /* Adiciona margem à esquerda */
+}
+
+.portfolio-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.portfolio-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0c0125;
+    margin-bottom: 15px;
+}
+
+.images-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.images-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.swiper-container {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.swiper-slide img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.swiper-slide {
+    transition: transform 0.5s ease;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-container {
+    overflow: hidden;
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0c0125;
+    z-index: 1000; /* Certifica-se de que a barra fique acima de outros elementos */
+    transition: background-color 0.3s ease; /* Adiciona uma transição para a mudança de cor */
+}
+
+#Name {
+    transition: color 0.3s ease; /* Adiciona uma transição para a mudança de cor do nome */
+}
+
+/* Adiciona uma classe para a barra quando houver rolagem para baixo */
+.scrolled {
+    background-color: #0c0125; /* Cor de fundo quando rolado para baixo */
+}
+
+.scrolled #Name {
+    color: #fff; /* Cor do nome quando rolado para baixo */
+}
